@@ -45,7 +45,7 @@ research_experience = input_data.radio("Research Experience", ("Yes", "No"))
 if research_experience == "Yes":
   research_experience = 1
 else:
-research_experience = 0
+  research_experience = 0
 
 #create a prediction button
 if input_data.button("Predict"):
