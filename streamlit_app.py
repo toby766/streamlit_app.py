@@ -21,5 +21,4 @@ else:
 
 
 # display the prediction
-st.write(f"Chance of Admit: {prediction[0]:.2f}")
 st.run()
