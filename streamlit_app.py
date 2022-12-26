@@ -20,5 +20,3 @@ else:
   research_experience = 0
 
 
-# display the prediction
-st.run()
