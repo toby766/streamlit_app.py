@@ -51,7 +51,7 @@ input_data = {
 
 input_data = pd.DataFrame([input_data])
 
-# make the prediction
+# make the predictions
 prediction = model.predict(input_data)[0]
 
 # display the prediction
