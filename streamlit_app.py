@@ -11,8 +11,8 @@ df = df.dropna()
 df = pd.get_dummies(df)
 
 # split the data into training and test sets
-X = df.drop("Chance of Admit", axis=1)
-y = df["Chance of Admit"]
+X = df.drop("Chance of Admit ", axis=1)
+y = df["Chance of Admit "]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 # train the model
