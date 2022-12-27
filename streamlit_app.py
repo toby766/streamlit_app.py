@@ -38,22 +38,22 @@ else:
   research_experience = 0
 
 
-input_data = {
-    "GRE Score": gre_score,
-    "TOEFL Score": toefl_score,
-    "University Rating": university_rating,
-    "SOP Strength": sop_strength,
-    "LOR Strength": lor_strength,
-    "Undergraduate GPA": undergraduate_gpa,
-    "Research Experience_Yes": 1 if research_experience == "Yes" else 0,
-    "Research Experience_No": 1 if research_experience == "No" else 0,
+#create a prediction button
+if input_data.button("Predict"):
+# create a dictionary with the input data
+data = {
+"GRE Score": gre_score,
+"TOEFL Score": toefl_score,
+"University Rating": university_rating,
+"SOP": sop_strength,
+"LOR ": lor_strength,
+"CGPA": undergraduate_gpa,
+"Research": research_experience,
 }
 
-input_data = pd.DataFrame([input_data])
-
-# make the predictions
-prediction = model.predict(input_data)[0]
+# make a prediction using the model
+prediction = model.predict([data])
 
 # display the prediction
-st.write(f"The predicted chance of admission is: {prediction:.2f}")
-
+st.write(f"Chance of Admit: {prediction[0]:.2f}")
+st.run()
