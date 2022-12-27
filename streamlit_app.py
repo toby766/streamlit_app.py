@@ -41,7 +41,7 @@ else:
 #create a prediction button
 if input_data.button("Predict"):
   # create a dictionary with the input data
-  data = {
+  input_data = {
   "GRE Score": gre_score,
   "TOEFL Score": toefl_score,
   "University Rating": university_rating,
@@ -52,7 +52,7 @@ if input_data.button("Predict"):
   }
 
 # make a prediction using the model
-prediction = model.predict([data])
+prediction = model.predict([input_data])
 
 # display the prediction
 st.write(f"Chance of Admit: {prediction[0]:.2f}")
