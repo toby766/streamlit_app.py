@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
 # load the data
-df = pd.read_csv("admissions_data.csv")
+df = pd.read_csv("Admission_Predict.csv")
 
 # preprocess the data
 df = df.dropna()
